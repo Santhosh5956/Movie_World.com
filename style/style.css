@@ -1,0 +1,164 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background:url(../images/Main_background.jpg) center no-repeat;
+    height: 100vh;
+    background-size: 140%;
+}
+nav{
+    height: 20vh;
+    background:linear-gradient(black,rgba(0, 0, 0, 0.60),rgba(0,0,0,0));
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: white;
+    font-family: montserrat;
+    font-stretch:extra-expanded;
+    font-size: 30pt;
+    font-weight: 500;
+    display:flex;
+}
+.menubar{
+    margin: 10px 5px 10px 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menubar .lines{
+    background-color: white;
+    width: 46px;
+    height: 6px;
+    display: block;
+    margin: 7px;
+    border-radius: 5px;
+}
+.menubar:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+    border-radius: 3px;
+    transition: 0.5s;
+}
+#catagories li a img{
+    height: 2.5in;
+    width:2.5in;
+}
+#catagories li{
+    display: inline-block;
+    margin: 40px;
+    padding: 10px;
+    transition: 0.5s;
+}
+#catagories{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+#catagories li:hover{
+    transform: scale(1.15);
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+#menu{
+    background:rgba(0, 0, 0, 0.9);
+    display: inline-block;
+    height: 80%;
+    position:absolute;
+    width: 35%;
+    left: -35%;
+    transition: 1s;
+    border-radius: 0 40px 40px 0;
+    top: 20%;
+}
+#menu.slide{
+    left:0;
+    transition: 1s;
+}
+#menu li{
+    margin:10px;
+    text-align:center;
+    cursor: pointer;
+    width: 90%;
+    transition: .3s;
+}
+#menu h3{
+    font-family: poppins;
+    font-size: 20pt;
+    font-weight: 400;
+    color: white;
+    padding:10px;
+    cursor:default;
+}
+#menu li a{
+    display:block;
+    font-family: poppins;
+    font-size: 14pt;
+    color: white;
+    transition: .3s;
+    padding: 15px 0;
+    width: 100%;
+}
+#menu li:hover{
+    transform: scale(1.12);
+    background-color: rgba(255, 255, 255, 0.137);
+    transition: .3s;
+}
+#menu li:hover a{
+    color: white;
+    transition: .3s;
+}
+::-webkit-scrollbar{width: 0;}
+@media (max-width:800px){
+    body{
+        background-position:center;
+        background-size: 250%;
+    }
+    #catagories li a img{
+        height: 1.8in;
+        width: 1.8in;    
+    }
+    #catagories li{
+        margin: 10px;
+    }
+}
+@media (max-width:500px){
+    nav a{
+        font-size: 28pt;
+        margin: 0;
+        
+    }
+    .menubar{
+        padding: 2px;
+    }
+    .menubar .lines{
+        width: 34px;
+        height: 4px;
+    }
+    body{
+        height: 1;
+        background:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2),rgba(0,0,0,0.1)),url(../images/MBG.jpg) center;
+        background-size: 120%;
+    }
+    #catagories{
+        flex-direction:column;
+    }
+    #menu{
+        width: 3in;
+        left: -3in;
+        border-radius: 0 30px 0 0;
+    }
+    #menu h3{
+        font-size: 18pt;
+        padding: 5px;
+        margin: 10px 0 0 10px;
+    }
+}
